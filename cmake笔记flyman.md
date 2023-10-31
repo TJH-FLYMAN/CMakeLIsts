@@ -49,7 +49,7 @@ MESSAGE(STATUS "This is SOURCE dir "${HELLO_SOURCE_DIR})
 ADD_EXECUTABLE(hello ${SRC_LIST})
 ```
 `cmake .`输出结果
-```c
+```cpp
 -- The C compiler identification is GNU 9.4.0
 -- The CXX compiler identification is GNU 9.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -251,7 +251,6 @@ hello ：库名
 STATIC ： 编译静态库STATIC，编译动态库SHARED（参数）
 ${LIBHELLO_SRC}：源文件 
 */
-hello
 ADD_LIBRARY(hello STATIC ${LIBHELLO_SRC})
 ```
 在linux中静态库名字一般为lib+库名+.a，在这里生成的库名是libhello.a(a=archive,档案)。
@@ -262,7 +261,6 @@ hello ：库名
 SHARED ： 编译动态库SHARED（参数）
 ${LIBHELLO_SRC}：源文件 
 */
-hello
 ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
 ```
 在Linux中，动态库名字为lib+库名+.so,在这里生成的库名是libhello.so( so=shared object)
